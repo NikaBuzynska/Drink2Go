@@ -1,0 +1,45 @@
+.navigation {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.navigation__logo-link {
+    display: inline-block;
+    padding: 12px 20px;
+
+    @media (min-width: $tablet-width) {
+        padding: 22px 20px;
+    }
+}
+.navigation__logo-icon {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 32px;
+    height: 36px;
+    
+    @media (min-width: $tablet-width) {
+        width: 82px;
+        height: 36px;
+    }
+}
+
+.navigation__toggle {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    background-image: url("/img/icons/stack.svg#burger-toggle");
+    background-repeat: no-repeat;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+}
+
+.navigation__list {
+    margin: 0;
+}
