@@ -1,7 +1,20 @@
 /* GLOBAL */
-@import "global/variables";
-@import "global/global";
-@import "global/fonts";
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/page__body.scss";
+@import "blocks/header.scss";
+@import "blocks/navigation.scss";
+@import "blocks/site-list.scss";
+@import "blocks/user-list.scss";
+@import "blocks/form.scss";
+@import "blocks/catalog.scss";
+@import "blocks/advantages.scss";
+@import "blocks/main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/result.scss";
+@import "blocks/social-container.scss";
+@import "blocks/footer-contacts.scss";
+@import "blocks/nav-footer.scss";
