@@ -1,1 +1,6 @@
+@import 'mixin';
+
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+.visually-hidden {
+    @include visually-hidden;
+  }

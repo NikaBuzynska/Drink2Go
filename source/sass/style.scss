@@ -1,7 +1,8 @@
 /* GLOBAL */
-@import "global/variables.scss";
-@import "global/global.scss";
 @import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/mixin.scss";
+@import "global/variables.scss";
 
 /* BLOCKS */
 @import "blocks/page__body.scss";
@@ -18,3 +19,4 @@
 @import "blocks/social-container.scss";
 @import "blocks/footer-contacts.scss";
 @import "blocks/nav-footer.scss";
+@import "blocks/promo.scss";
