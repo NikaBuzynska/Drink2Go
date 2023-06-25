@@ -1,7 +1,120 @@
+.promo {
+ position: relative;
+}
+
+.promo__product-subtitle {
+    color: #7859CF;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .promo__product-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
     margin: 0;
 }
 
+.promo__product-description {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.promo__product-img {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+.promo__info-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+}
+
+.swiper {
+    // width: 600px;
+    // height: 300px;
+}
+
 .promo__swiper-pagination {
-    display: none;
+    @media (max-width: $desktop-width) {
+        @include visually-hidden;
+    }
+}
+
+.promo__swiper-slide {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo__swiper-button-prev {
+    &::after{
+        display:none;
+    }
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("/img/icons/stack.svg#adv-left");
+    background-repeat: no-repeat;
+    background-size: 11px 20px;
+    background-position: center;
+    border: none;
+}
+
+.promo__swiper-button-next {
+    &::after{
+        display:none;
+    } 
+
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("/img/icons/stack.svg#adv-right");
+    background-repeat: no-repeat;
+    background-size: 11px 20px;
+    background-position: center;
+    border: none;
+}
+
+.product-price-wrapper {
+    margin: 0 25px;
+}
+
+.product-price {
+    font-size: 16px;
+    line-height: 32px;
+    margin-right: 6px;
+    color: #7859CF;
+}
+
+.product-order-button {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-left: 20px;
+    padding: 8px 20px;
+    color: #ffffff;
+    background-color: #7859CF;
+    border-radius: 4px;
+    border: none;
 }

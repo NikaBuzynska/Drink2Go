@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,11 +15,13 @@
       <div class="navigation__container">
         <a class="navigation__logo-link">
           <picture>
+            <source media="(min-width: 1440px)" srcset="img/icons/stack.svg#logo-desktop">
             <source media="(min-width: 768px)" srcset="img/icons/stack.svg#logo-tablet">
             <img class="navigation__logo-icon" src="img/icons/stack.svg#logo-mobile" alt="logo">
           </picture>
         </a>
       </div>
+      <span class="navigation__description">Интернет-магазин кофейных напитков</span>
       <button class="navigation__toggle" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
@@ -63,42 +66,59 @@
           </a>
         </li>
       </ul>
-      <span class="navigation__description visually-hidden">Интернет-магазин кофейных напитков</span>
     </nav>
   </header>
   <main class="main">
     <header class="main__header">
       <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
       <div class="promo">
-        <div class="promo__swiper">
+        <div class="promo__swiper swiper">
           <!-- Additional required wrapper -->
-          <div class="promo__swiper-wrapper">
+          <div class="promo__swiper-wrapper swiper-wrapper">
             <!-- Slides -->
-            <div class="promo__swiper-slide">
+            <div class="promo__swiper-slide swiper-slide">
+              <img class="promo__product-img" src="img/adv-coffee1.png" alt="Декаф Флэт Уайт">
+              <div class="promo__info-wrapper">
+                <p class="promo__product-subtitle">Новинка!</p>
+                <h2 class="promo__product-title">
+                  Декаф Флэт Уайт
+                </h2>
+                <p class="promo__product-description">
+                  Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что<br>нужно для
+                  расслабления
+                  после тяжёлого рабочего дня
+                </p>
+                <div class="product-price-wrapper">
+                  <del class="product-price">295₽</del>
+                  <span class="product-new-price">225₽</span>
+                  <button class="product-order-button">Заказать</button>
+                </div>
+              </div>
+            </div>
+            <div class="promo__swiper-slide swiper-slide">
               <h2 class="promo__product-title">
-                Декаф Флэт Уайт
+                Лавандовый Латте
               </h2>
               <p class="promo__product-description">
-                Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для
-                расслабления
-                после тяжёлого рабочего дня
+                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас
+                прямо на вершину Радужных гор
               </p>
-              <span class="promo__product-price"></span>
-              <button class="promo__order-button"></button>
             </div>
-            <div class="promo__swiper-slide">Slide 2</div>
-            <div class="promo__swiper-slide">Slide 3</div>
-            ...
+            <div class="promo__swiper-slide swiper-slide">
+              <h2 class="promo__product-title">
+                Тройной Эспрессо
+              </h2>
+              <p class="promo__product-description">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что
+                такое настоящая бодрость
+              </p>
+            </div>
           </div>
 
-          <div class="promo__swiper-pagination"></div>
+          <div class="promo__swiper-pagination swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="promo__swiper-button-prev"></div>
-          <div class="promo__swiper-button-next"></div>
-
-          <!-- If we need scrollbar -->
-          <div class="promo__swiper-scrollbar"></div>
+          <button class="promo__swiper-button-prev swiper-button-prev"></button>
+          <button class="promo__swiper-button-next swiper-button-next"></button>
         </div>
 
       </div>
@@ -426,8 +446,9 @@
       </a>
     </div>
   </footer>
-  <script src="./js/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="./js/script.js" defer></script>
+  <script src="./js/swiper.js" defer></script>
 </body>
 
 </html>

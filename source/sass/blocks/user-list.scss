@@ -6,6 +6,9 @@
 
     @media (min-width: $tablet-width) {
         margin: 0 0 0 auto;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 16px;
     }
 }
 
@@ -26,5 +29,12 @@
 .user-list__link-text {
     @media (max-width: $desktop-width) {
         @include visually-hidden;
+        display: inline-block;
+        margin-left: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: inline-block;
+        margin-left: 8px;
     } 
 }
