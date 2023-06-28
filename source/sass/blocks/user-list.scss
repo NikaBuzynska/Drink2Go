@@ -1,19 +1,40 @@
 .user-list {
     display: flex;
-    margin: 0;
+    flex-wrap: wrap;
+    margin: 0 60px 0 auto;
     list-style: none;
 
     @media (min-width: $tablet-width) {
-        margin-left: auto;
+        margin: 0 0 0 auto;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 16px;
     }
 }
 
 .user-list__item {
     line-height: 16px;
     padding: 22px 22px;
+
+    @media (min-width: $tablet-width) {
+        padding: 32px 22px;
+    }
 }
 
 .user-list__icon {
     display: inline-block;
     vertical-align: bottom;
+}
+
+.user-list__link-text {
+    @media (max-width: $desktop-width) {
+        @include visually-hidden;
+        display: inline-block;
+        margin-left: 8px;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: inline-block;
+        margin-left: 8px;
+    } 
 }

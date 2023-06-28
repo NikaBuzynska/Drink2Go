@@ -1,7 +1,227 @@
+.promo {
+ position: relative;
+}
+
+.promo__swiper {
+    @media (min-width: $tablet-width) {
+        overflow: visible;
+        margin-bottom: 188px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+    }
+}
+
+.promo__product-subtitle {
+    color: #7859CF;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 4px;
+    }
+
+    @media (min-width: $desktop-width) {
+        text-align: start;
+    }
+}
+
 .promo__product-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+        font-size: 56px;
+        line-height: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+        text-align: start;
+        margin-bottom: 16px;
+    }
+}
+
+.promo__product-description {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 100px;
+
+    @media (min-width: $tablet-width) {
+        width: 100%;
+        font-size: 20px;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        text-align: start;
+        margin-bottom: 40px;
+    }
+}
+
+.promo__product-img {
+    width: 280px;
+    height: 280px;
+    margin: 20px auto 10px;
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+        width: 476px;
+        height: 476px;
+        bottom: -200px;
+        left: 146px;
+    }
+
+    @media (min-width: $desktop-width) {
+        position: static;
+        width: 600px;
+        height: 600px;
+        margin: 30px 30px 84px 105px;
+    }
+}
+
+.promo__info-wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+
+    @media (min-width: $tablet-width) {
+        margin: 60px 80px 4px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 180px;
+        margin-left: 0;
+    }
 }
 
 .promo__swiper-pagination {
-    display: none;
+    @media (max-width: $desktop-width) {
+        display: none;
+    }
+}
+
+.promo__swiper-slide {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+        
+        min-height: 620px;
+    }
+
+    @media (min-width: $desktop-width) {
+        flex-direction: revert;
+    }
+}
+
+.promo__swiper-slide1 {
+    background-color: #F3EBE1;
+}
+
+.promo__swiper-slide2 {
+    background-color: #EAE6FC;
+}
+
+.promo__swiper-slide3 {
+    background-color: #E5E6E8;
+}
+
+.promo__swiper-button-prev {
+    &::after{
+        display:none;
+    }
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 22px;
+    left: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("/img/icons/stack.svg#adv-left");
+    background-repeat: no-repeat;
+    background-size: 11px 20px;
+    background-position: center;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+        width: 80px;
+    }
+}
+
+.promo__swiper-button-next {
+    &::after{
+        display:none;
+    } 
+
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 22px;
+    right: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("/img/icons/stack.svg#adv-right");
+    background-repeat: no-repeat;
+    background-size: 11px 20px;
+    background-position: center;
+    border: none;
+
+    @media (min-width: $tablet-width) {
+        width: 80px;
+    }
+}
+
+.product-price-wrapper {
+    margin: 0 25px;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    @media (min-width: $desktop-width) {
+        text-align: start;
+        margin: 0;
+    }
+}
+
+.product-price {
+    font-size: 16px;
+    line-height: 32px;
+    margin-right: 6px;
+    color: #7859CF;
+}
+
+.product-new-price {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+}
+
+.product-order-button {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-left: 20px;
+    padding: 8px 20px;
+    color: #ffffff;
+    background-color: #7859CF;
+    border-radius: 4px;
+    border: none;
 }

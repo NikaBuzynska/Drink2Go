@@ -2,6 +2,16 @@
     position: relative;
     display: flex;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
 }
 
 .navigation__logo-link {
@@ -11,7 +21,12 @@
     @media (min-width: $tablet-width) {
         padding: 22px 20px;
     }
+
+    @media (min-width: $desktop-width) {
+        padding: 22px 0;
+    }
 }
+
 .navigation__logo-icon {
     display: inline-block;
     vertical-align: bottom;
@@ -20,6 +35,11 @@
     
     @media (min-width: $tablet-width) {
         width: 82px;
+        height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 170px;
         height: 36px;
     }
 }
@@ -42,4 +62,21 @@
 
 .navigation__list {
     margin: 0;
+}
+
+.navigation__description {
+    @media (max-width: $desktop-width) {
+        @include visually-hidden;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: inline-block;
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 16px;
+        width: 126px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left: 20px;
+    } 
 }

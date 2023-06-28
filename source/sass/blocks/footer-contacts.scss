@@ -1,0 +1,35 @@
+.footer-contacts {
+    padding: 20px;
+    box-shadow: 0px 1px 1px #f0ebff;
+}
+
+.footer-contacts__section-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 12px;
+    color: #7859CF;
+}
+
+.footer-contacts__list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.footer-contacts__list-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.footer-contacts__link {
+    // padding-left: 18px;
+}
+
+.footer-contacts__contacts {
+    font-size: 14px;
+    line-height: 20px;
+}
