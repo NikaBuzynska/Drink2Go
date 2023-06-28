@@ -1,0 +1,28 @@
+.catalog {
+    padding-top: 50px;
+    background-color: #F8F8F8;
+
+    @media (min-width: $tablet-width) {
+        padding-top: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-top: 100px;
+    }
+    
+}
+
+.catalog__title {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7859CF;
+    margin: 0;
+}
+
+.catalog__subtitle {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}

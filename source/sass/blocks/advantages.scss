@@ -1,7 +1,122 @@
+.advantages {
+    padding-top: 50px;
+    text-align: center;
+    @media (min-width: $tablet-width) {
+        padding: 60px 30px 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 100px 40px 120px;
+    }
+}
+
+
 .advantages__title {
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
     text-transform: uppercase;
     color: #7859CF;
+}
+
+.advantages__subtitle {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+}
+
+.section-subtitle {
+    @media (min-width: $tablet-width) {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 64px;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 42px;
+        line-height: 64px;
+    }
+}
+
+.advantages__list {
+    list-style: none;
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 60px 0 0 0;
+    }
+}
+
+.advantages__list-item {
+    padding-top: 98px;
+    background-size: 50px 56px;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+
+    @media (min-width: $tablet-width) {
+        text-align: left;
+        width: 354px;
+        padding-top: 0;
+        padding-left: 71px;
+        padding-right: 27px;
+        margin-bottom: 50px;
+        box-sizing: border-box;
+        background-position: 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 317px;
+        padding-top: 98px;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 30px;
+        background-position: 50% 13px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.advantages__list-item--speed { 
+    background-image: url("/img/icons/stack.svg#speed"); 
+}
+
+.advantages__list-item--convenience {
+    background-image: url("/img/icons/stack.svg#convenience");
+}
+
+.advantages__list-item--energy {
+    background-image: url("/img/icons/stack.svg#energy");
+}
+
+.advantages__list-item--eco {
+    background-image: url("/img/icons/stack.svg#eco");
+}
+
+.advantages__list-title {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0;
+    
+    @media (min-width: $tablet-width) {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 10px;
+    }
+}
+
+.advantages__list-description {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
