@@ -1,18 +1,45 @@
 .result {
     background-color: #F8F8F8;
+
+    @media (min-width: $tablet-width) {
+        flex-grow: 1;
+    }
 }
 
 .result__sorting {
     display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-right: 8px;
+
+    @media (min-width: $tablet-width) {
+        margin-right: 10px
+    }
+}
+
+.result__sorting-option {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #7859cf;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .result__list {
     list-style: none;
-    padding: 20px;
+    padding: 0;
+    margin: 0;
 
     @media (min-width: $tablet-width) {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0;
     }
 }
 
@@ -20,7 +47,6 @@
     width: 280px;
     padding: 0 20px 20px;
     margin-top: 20px;
-    margin-bottom: 20px;
     background-color: #ffffff;
     box-sizing: border-box;
 
@@ -100,5 +126,16 @@
         left: 20px;
         background-image: url("/img/icons/stack.svg#cart-catalog");
         content: "";
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #9070EC;
+    }
+    &:active {
+        background-color: #593CAC;
+    }
+    &:disabled {
+        background-color: #BDBDBD;
     }
 }

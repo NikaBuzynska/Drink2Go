@@ -2,6 +2,7 @@
     position: relative;
     display: flex;
     box-sizing: border-box;
+    flex-wrap: wrap;
 
     @media (min-width: $tablet-width) {
         margin-left: 20px;
@@ -60,6 +61,10 @@
     }
 }
 
+.navigation--nojs .navigation__toggle {
+    display: none;
+  }
+
 .navigation__list {
     margin: 0;
 }
@@ -80,3 +85,18 @@
         margin-left: 20px;
     } 
 }
+
+@media (max-width: $mobile-width-only) {
+    .navigation--opened .site-list {
+      position: absolute;
+      top: 79px;
+      right: 0;
+      width: 100%;
+      background-color: #ffffff;
+    }
+  
+  
+    .navigation--closed .site-list {
+      display: none;
+    }
+  }

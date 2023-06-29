@@ -1,10 +1,13 @@
 .pagination {
     background-color: #F8F8F8;
+    padding: 40px 20px 44px 20px;
 }
 
 .pagination__list {
     display: flex;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .pagination__item {
@@ -12,13 +15,43 @@
     height: 40px;
     text-align: center;
     font-size: 16px;
-    padding: 8px;
     line-height: 24px;
-    
+    background-color: #ffffff;
+    margin-left: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
+.pagination__item {
+    &.forward-toggle,
+    &.back-toggle {
+      &:hover {
+        svg {
+          fill: #ffffff; /* Здесь укажите желаемый цвет fill при наведении */
+        }
+      }
+    }
+}
+
 .pagination__link {
+    display: block;
     color: #7859cf;
+    padding: 8px;
     background-color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: #9070EC;
+    }
+}
+.pagination__button-icon {
+    fill: #9070EC
+}
+
+.pagination__link:hover .pagination__button-icon {
+    fill: #ffffff;
 }

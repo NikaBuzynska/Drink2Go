@@ -12,8 +12,7 @@
     @media (min-width: $desktop-width) {
         display: block;
         width: 318px;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 0;
         margin-right: 30px;
     }
 }
@@ -33,7 +32,7 @@
 }
 
 .social-container__motto {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width) {
         @include visually-hidden;
     }
 
@@ -41,6 +40,7 @@
         font-size: 14px;
         line-height: 20px;
         margin-bottom: 50px;
+        display: block;
     }
 }
 
