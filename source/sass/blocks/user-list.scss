@@ -14,7 +14,11 @@
 
 .user-list__item {
     line-height: 16px;
-    padding: 22px 22px;
+}
+
+.user-list__item-link {
+    display: inline-block;
+    padding: 22px;
 
     @media (min-width: $tablet-width) {
         padding: 32px 22px;
@@ -24,6 +28,11 @@
 .user-list__icon {
     display: inline-block;
     vertical-align: bottom;
+    fill: #333333;
+}
+
+.user-list__item-link:active {
+    background-color: #F0EBFF;
 }
 
 .user-list__link-text {

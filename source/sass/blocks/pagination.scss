@@ -16,23 +16,26 @@
     text-align: center;
     font-size: 16px;
     line-height: 24px;
-    background-color: #ffffff;
     margin-left: 20px;
     box-sizing: border-box;
     border-radius: 4px;
     cursor: pointer;
-}
 
-.pagination__item {
-    &.forward-toggle,
-    &.back-toggle {
-      &:hover {
-        svg {
-          fill: #ffffff; /* Здесь укажите желаемый цвет fill при наведении */
-        }
-      }
+    &:first-child {
+        margin-left: 0;
     }
 }
+
+.pagination__item--forward-toggle,
+.pagination__item--back-toggle {
+    &:hover {
+        svg {
+            fill: #ffffff;
+        }
+    }
+}
+
+
 
 .pagination__link {
     display: block;
@@ -48,6 +51,13 @@
         background-color: #9070EC;
     }
 }
+
+.pagination__item--current .pagination__link{
+    font-weight: 600;
+    color: #333333;
+    background-color: transparent;
+}
+
 .pagination__button-icon {
     fill: #9070EC
 }

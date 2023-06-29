@@ -1,6 +1,10 @@
 .site-list {
+    font-size: 12px;
+    line-height: 16px;
     list-style: none;
-    @media (max-width: $tablet-width) {
+    text-transform: uppercase;
+
+    @media (max-width: $mobile-width-only) {
         order: 1;
         padding:0;
         width: 100%;
@@ -10,16 +14,14 @@
         display: flex;
         flex-wrap: wrap;
         font-weight: 500;
-        font-size: 12px;
-        line-height: 16px;
         margin-left: auto;
-        margin-right: autox;
+        margin-right: auto;
         text-transform: uppercase;
     }
 }
 
 .site-list__item {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $mobile-width-only) {
         border-top: 1px solid #F0EBFF;
 
         &:last-child{

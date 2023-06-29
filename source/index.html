@@ -172,7 +172,7 @@
             <legend class="form__filter-title">Цена</legend>
             <div class="range">
               <div class="range__scale">
-                <div class="range__bar" style="right:61px; left:0">
+                <div class="range__bar" style="right:20px; left:0">
                   <button class="range__toggle toggle-min" type="button">
                   </button>
                   <button class="range__toggle toggle-max" type="button">
@@ -189,7 +189,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset class="form__filter-group">
+          <fieldset class="form__filter-group form__filter-group--radio">
             <legend class="form__filter-title">Наличие молока</legend>
 
             <ul class="radio-type__list">
@@ -223,7 +223,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__filter-group">
+          <fieldset class="form__filter-group form__filter-group--checkbox">
             <legend class="form__filter-title">Страна произрастания</legend>
             <ul class="checkbox-type__list">
               <li class="checkbox-type__item">
@@ -395,7 +395,7 @@
       </section>
       <div class="pagination">
         <ul class="pagination__list">
-          <li class="pagination__item back-toggle">
+          <li class="pagination__item pagination__item--back-toggle">
             <a class="pagination__link" href="#">
               <svg class="pagination__button-icon" width="6" height="10" viewBox="0 0 6 10">
                 <use xlink:href="/img/icons/stack.svg#paggin-left"></use>
@@ -406,13 +406,13 @@
           <li class="pagination__item">
             <a class="pagination__link" href="#">1</a>
           </li>
-          <li class="pagination__item  pagination-current">
+          <li class="pagination__item  pagination__item--current">
             <a class="pagination__link" href="#">2</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">3</a>
           </li>
-          <li class="pagination__item forward-toggle">
+          <li class="pagination__item pagination__item--forward-toggle">
             <a class="pagination__link" href="#">
               <svg class="pagination__button-icon" width="6" height="10" viewBox="0 0 6 10" fill="none">
                 <use xlink:href="/img/icons/stack.svg#paggin-right"></use>
@@ -469,7 +469,7 @@
     </div>
     <nav class="nav-footer">
       <section class="nav-footer__container">
-        <label class="nav-footer__section-title">Интернет-магазин</label>
+        <h4 class="nav-footer__section-title">Интернет-магазин</h4>
         <ul class="nav-footer__list">
           <li class="nav-footer__list-item">
             <a class="nav-footer__link">Каталог</a>
@@ -486,7 +486,7 @@
         </ul>
       </section>
       <section class="nav-footer__container">
-        <label class="nav-footer__section-title"> Медиа</label>
+        <h4 class="nav-footer__section-title">Медиа</h4>
         <ul class="nav-footer__list">
           <li class="nav-footer__list-item">
             <a class="nav-footer__link">Блог</a>
@@ -499,17 +499,17 @@
           </li>
         </ul>
       </section>
-      <section class="footer-contacts nav-footer__container">
-        <label class="footer-contacts__section-title">Контакты</label>
+      <section class="footer-contacts">
+        <h4 class="footer-contacts__section-title">Контакты</h4>
         <ul class="footer-contacts__list">
           <li class="footer-contacts__list-item">
-            <a class="footer-contacts__map footer-contacts__link">
+            <a class="footer-contacts__link footer-contacts__link--address">
               <span class="footer-contacts__address footer-contacts__contacts">Санкт-Петербург, набережная реки
                 Карповки, дом 5</span>
             </a>
           </li>
           <li class="footer-contacts__list-item">
-            <a class="footer-contacts__tel footer-contacts__link">
+            <a class="footer-contacts__link footer-contacts__link--tel">
               <span class="footer-contacts__tel footer-contacts__contacts">+7 (999) 999-99-99</span>
             </a>
           </li>
