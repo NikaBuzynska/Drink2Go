@@ -1,6 +1,31 @@
+.nav-footer {
+    @media (min-width: $tablet-width) { 
+        display: flex;
+    }
+
+    @media (min-width: $desktop-width) {
+        
+    }
+}
+
 .nav-footer__container {
     padding: 20px;
     box-shadow: 0px 1px 1px #f0ebff;
+
+    @media (min-width: $tablet-width) { 
+        width: 223px;
+        box-shadow: none;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 317px;
+        padding: 0;
+        margin-right: 30px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
 }
 
 .nav-footer__section-title {

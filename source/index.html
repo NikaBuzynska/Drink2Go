@@ -77,7 +77,8 @@
           <div class="promo__swiper-wrapper swiper-wrapper">
             <!-- Slides -->
             <div class="promo__swiper-slide promo__swiper-slide1 swiper-slide">
-              <img class="promo__product-img" src="img/adv-coffee1.png" srcset="img/adv-coffee1@2x.png 2x" alt="Декаф Флэт Уайт">
+              <img class="promo__product-img" src="img/adv-coffee1.png" srcset="img/adv-coffee1@2x.png 2x"
+                alt="Декаф Флэт Уайт">
               <div class="promo__info-wrapper">
                 <p class="promo__product-subtitle">Новинка!</p>
                 <h2 class="promo__product-title">
@@ -170,15 +171,15 @@
         <fieldset class="form__filter-group">
           <legend class="form__filter-title">Цена</legend>
           <div class="range">
-            <div clsss="range__scale">
-              <div class="range__bar">
-                <button class="range__toggle toggle-min">
-
+            <div class="range__scale">
+              <div class="range__bar" style="right:61px; left:0">
+                <button class="range__toggle toggle-min" type="button">
                 </button>
-                <button class="range__toggle toggle-max">
-
+                <button class="range__toggle toggle-max" type="button">
                 </button>
               </div>
+            </div>
+            <div class="form__price-container">
               <label class="form__price-lable">
                 <input class="form__price-input" type="number" name="minimum-price" value="0" placeholder="0">
               </label>
@@ -190,7 +191,7 @@
         </fieldset>
         <fieldset class="form__filter-group">
           <legend class="form__filter-title">Наличие молока</legend>
-          
+
           <ul class="radio-type__list">
             <li class="radio-type__item">
               <label class="control">
@@ -227,35 +228,35 @@
           <ul class="checkbox-type__list">
             <li class="checkbox-type__item">
               <label class="control">
-                <input class=" visually-hidden control__input" type="checkbox" checked>
+                <input class=" visually-hidden control__input" type="checkbox" name="brazil" checked>
                 <span class="control__switch"></span>
                 <span class="conrol__title">Бразилия</span>
               </label>
             </li>
             <li class="checkbox-type__item">
               <label class="control">
-                <input class=" visually-hidden control__input" type="checkbox">
+                <input class=" visually-hidden control__input" name="ethiopia" type="checkbox">
                 <span class="control__switch"></span>
                 <span class="conrol__title">Эфиопия</span>
               </label>
             </li>
             <li class="checkbox-type__item">
               <label class="control">
-                <input class=" visually-hidden control__input" type="checkbox">
+                <input class=" visually-hidden control__input" name="columbia" type="checkbox">
                 <span class="control__switch"></span>
                 <span class="conrol__title">Колумбия</span>
               </label>
             </li>
             <li class="checkbox-type__item">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox">
+                <input class="visually-hidden control__input" name="beans" name="costa-rica" type="checkbox">
                 <span class="control__switch"></span>
                 <span class="conrol__title">Коста-Рика</span>
               </label>
             </li>
             <li class="checkbox-type__item">
               <label class="control">
-                <input class="visually-hidden control__input" type="checkbox" disabled>
+                <input class="visually-hidden control__input" type="checkbox" name="peru" disabled>
                 <span class="control__switch"></span>
                 <span class="conrol__title">Перу</span>
               </label>
@@ -270,12 +271,19 @@
     </section>
     <section class="result">
       <div class="result__sorting">
-        <select></select>
+        <span class="result__sorting-title">Сортировка:</span>
+        <select class="result__sorting-option" aria-label="сортировка">
+          <option value="default">по умолчанию</option>
+          <option value="expensive">сначала дорогие</option>
+          <option value="cheap">сначала дешёвые</option>
+          <option value="high-rating">высокий рейтинг</option>
+        </select>
       </div>
       <ul class="result__list">
         <li class="result__list-item">
           <a class="result__link">
-            <img  class="result__image" src="img/coffee-catalog1.jpg" srcset="img/coffee-catalog1@2x.jpg 2x" width="130" height="188" alt="Декаф Флэт Уайт">
+            <img class="result__image" src="img/coffee-catalog1.jpg" srcset="img/coffee-catalog1@2x.jpg 2x" width="130"
+              height="188" alt="Декаф Флэт Уайт">
             <h4 class="result__title">Декаф Флэт Уайт</h4>
             <p class="result__description">
               Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -292,7 +300,8 @@
         </li>
         <li class="result__list-item">
           <a class="result__link">
-            <img  class="result__image" src="img/coffee-catalog2.jpg" srcset="img/coffee-catalog2@2x.jpg 2x" width="130" height="188" alt="Декаф Флэт Уайт">
+            <img class="result__image" src="img/coffee-catalog2.jpg" srcset="img/coffee-catalog2@2x.jpg 2x" width="130"
+              height="188" alt="Декаф Флэт Уайт">
             <h4 class="result__title">Декаф Флэт Уайт</h4>
             <p class="result__description">
               Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -309,7 +318,8 @@
         </li>
         <li class="result__list-item">
           <a class="result__link">
-            <img  class="result__image" src="img/coffee-catalog3.jpg" srcset="img/coffee-catalog3@2x.jpg 2x" width="130" height="188" alt="Декаф Флэт Уайт">
+            <img class="result__image" src="img/coffee-catalog3.jpg" srcset="img/coffee-catalog3@2x.jpg 2x" width="130"
+              height="188" alt="Декаф Флэт Уайт">
             <h4 class="result__title">Декаф Флэт Уайт</h4>
             <p class="result__description">
               Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -326,7 +336,8 @@
         </li>
         <li class="result__list-item">
           <a class="result__link">
-            <img  class="result__image" src="img/coffee-catalog4.jpg" srcset="img/coffee-catalog4@2x.jpg 2x" width="130" height="188" alt="Декаф Флэт Уайт">
+            <img class="result__image" src="img/coffee-catalog4.jpg" srcset="img/coffee-catalog4@2x.jpg 2x" width="130"
+              height="188" alt="Декаф Флэт Уайт">
             <h4 class="result__title">Декаф Флэт Уайт</h4>
             <p class="result__description">
               Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -343,7 +354,8 @@
         </li>
         <li class="result__list-item">
           <a class="result__link">
-            <img  class="result__image" src="img/coffee-catalog5.jpg" srcset="img/coffee-catalog5@2x.jpg 2x" width="130" height="188" alt="Декаф Флэт Уайт">
+            <img class="result__image" src="img/coffee-catalog5.jpg" srcset="img/coffee-catalog5@2x.jpg 2x" width="130"
+              height="188" alt="Декаф Флэт Уайт">
             <h4 class="result__title">Декаф Флэт Уайт</h4>
             <p class="result__description">
               Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -361,8 +373,9 @@
         <li class="result__list-item">
           <a class="result__link">
             <picture>
-            <img  class="result__image" src="img/coffee-catalog6.jpg" srcset="img/coffee-catalog6@2x.jpg 2x" width="130" height="188" alt="Декаф Флэт Уайт">
-          </picture>
+              <img class="result__image" src="img/coffee-catalog6.jpg" srcset="img/coffee-catalog6@2x.jpg 2x"
+                width="130" height="188" alt="Декаф Флэт Уайт">
+            </picture>
             <h4 class="result__title">Декаф Флэт Уайт</h4>
             <p class="result__description">
               Кофе без кофеина из Эфиопии с натуральным фермерским молоком
@@ -414,13 +427,17 @@
   <footer class="page-footer">
     <div class="social-container">
       <a lass="social-container__logo-link">
-        <img class="social-container__logo-icon" src="img/icons/stack.svg#logo-tablet">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/icons/stack.svg#logo-desktop">
+          <img class="social-container__logo-icon" src="img/icons/stack.svg#logo-tablet">
+        </picture>
       </a>
+      <span class="social-container__motto">Интернет-магазин кофейных напитков</span>
       <ul class="social-container__list">
         <li class="social-container__list-item">
           <a class="social-container__link">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <use xlink:href="/img/icons/stack.svg#VK"></use>
+              <use xlink:href="/img/icons/stack.svg#vk"></use>
             </svg>
             <span class="visually-hidden">ВКонтакте</span>
           </a>
@@ -462,7 +479,7 @@
         </ul>
       </section>
       <section class="nav-footer__container">
-        <label class="nav-footer__title nav-footer__section-title"> Медиа</label>
+        <label class="nav-footer__section-title"> Медиа</label>
         <ul class="nav-footer__list">
           <li class="nav-footer__list-item">
             <a class="nav-footer__link">Блог</a>
@@ -475,12 +492,13 @@
           </li>
         </ul>
       </section>
-      <section class="footer-contacts">
+      <section class="footer-contacts nav-footer__container">
         <label class="footer-contacts__section-title">Контакты</label>
         <ul class="footer-contacts__list">
           <li class="footer-contacts__list-item">
             <a class="footer-contacts__map footer-contacts__link">
-              <span class="footer-contacts__address footer-contacts__contacts">Санкт-Петербург, набережная реки Карповки, дом 5</span>
+              <span class="footer-contacts__address footer-contacts__contacts">Санкт-Петербург, набережная реки
+                Карповки, дом 5</span>
             </a>
           </li>
           <li class="footer-contacts__list-item">

@@ -3,11 +3,45 @@
     justify-content: space-between;
     padding: 22px 20px;
     box-shadow: 0px 1px 1px #f0ebff;
+
+    @media (min-width: $tablet-width) {
+        padding-bottom: 12px;
+        box-shadow: none;
+    }
+    
+    @media (min-width: $desktop-width) {
+        display: block;
+        width: 318px;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 30px;
+    }
 }
 
 .social-container__logo-icon {
     width: 82px;
     height: 36px;
+
+    @media (min-width: $tablet-width) {
+        width: 170px;
+        height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 10px;
+    }
+}
+
+.social-container__motto {
+    @media (max-width: $desktop-width) {
+        @include visually-hidden;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 50px;
+    }
 }
 
 .social-container__list {
