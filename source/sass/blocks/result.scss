@@ -3,6 +3,11 @@
 
     @media (min-width: $tablet-width) {
         flex-grow: 1;
+        
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-left: 30px;
     }
 }
 
@@ -40,15 +45,23 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-width: $tablet-width) {
         display: grid;
         grid-template-columns: 349px 349px;
         gap: 30px;
+        width: 768px;
     }
 
     @media (min-width: $desktop-width) {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
         padding: 0;
+        grid-template-columns: 317px 317px 317px;
     }
 }
 
