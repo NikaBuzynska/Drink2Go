@@ -10,11 +10,26 @@
         font-size: 12px;
         line-height: 16px;
     }
+
+    @media (min-width: $desktop-width) {
+        padding-left: 0;
+    }
 }
 
 .user-list__item {
     line-height: 16px;
-    padding: 22px 22px;
+
+    @media (min-width: $desktop-width) {
+        &:first-child {
+            margin-right: 17px;
+        }
+    } 
+}
+
+.user-list__item-link {
+    display: inline-block;
+    padding: 22px;
+    text-decoration: none;
 
     @media (min-width: $tablet-width) {
         padding: 32px 22px;
@@ -24,17 +39,32 @@
 .user-list__icon {
     display: inline-block;
     vertical-align: bottom;
+    fill: #333333;
+}
+
+.user-list__item-link:hover .user-list__icon{
+    fill: #7859cf;
+}
+
+.user-list__item-link:hover {
+    color: #7859cf;
+}
+
+.user-list__item-link:active {
+    background-color: #F0EBFF;
+    color: #7859cf;
 }
 
 .user-list__link-text {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width-only) {
         @include visually-hidden;
         display: inline-block;
         margin-left: 8px;
     }
-
+    
     @media (min-width: $desktop-width) {
         display: inline-block;
-        margin-left: 8px;
+        margin-left: 5px;
+        color: #333333;
     } 
 }

@@ -4,17 +4,21 @@
     }
 
     @media (min-width: $desktop-width) {
-        
+        margin-top: 9px;
     }
 }
 
 .nav-footer__container {
-    padding: 20px;
+    padding: 17px 20px 21px;
+    margin-bottom: 5px;
     box-shadow: 0px 1px 1px #f0ebff;
 
     @media (min-width: $tablet-width) { 
         width: 223px;
         box-shadow: none;
+        box-sizing: border-box;
+        margin-right: 29px;
+        padding-bottom: 6px;
     }
 
     @media (min-width: $desktop-width) {
@@ -32,8 +36,9 @@
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
-    margin-bottom: 12px;
     color: #7859CF;
+    margin-top:0;
+    margin-bottom: 5px;
 }
 
 .nav-footer__list {
@@ -43,12 +48,7 @@
 }
 
 .nav-footer__list-item {
-    margin-bottom: 4px;
-    padding: 8px 0;
-
-    &:last-child {
-        padding-bottom: 0;
-    }
+    padding: 10px 0 7px;
 }
 
 .nav-footer__link {

@@ -1,10 +1,29 @@
 .pagination {
     background-color: #F8F8F8;
+    padding: 40px 20px 44px 20px;
+
+    @media (min-width: $tablet-width) {
+        padding: 69px 20px 91px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 61px 20px 120px;
+    }
 }
 
 .pagination__list {
     display: flex;
     list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+        justify-content: flex-end;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-right: 20px;
+    }
 }
 
 .pagination__item {
@@ -12,13 +31,69 @@
     height: 40px;
     text-align: center;
     font-size: 16px;
-    padding: 8px;
     line-height: 24px;
-    
+    margin-left: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:first-child {
+        margin-left: 0;
+    }
 }
+
+.pagination__item--forward-toggle,
+.pagination__item--back-toggle {
+    &:hover {
+        svg {
+            fill: #ffffff;
+        }
+    }
+    @media (min-width: $tablet-width) {
+        width: auto;
+        height: auto;
+    }
+}
+
+.pagination__title{
+    @media (max-width: $mobile-width-only) {
+        @include visually-hidden;
+    }
+}
+
 .pagination__link {
+    display: block;
     color: #7859cf;
+    padding: 8px;
     background-color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: #9070EC;
+    }
+}
+.pagination__item--forward-toggle .pagination__link,
+.pagination__item--back-toggle .pagination__link{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.pagination__item--current .pagination__link{
+    font-weight: 600;
+    color: #333333;
+    background-color: transparent;
+}
+
+.pagination__button-icon {
+    fill: #9070EC;
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+}
+
+.pagination__link:hover .pagination__button-icon {
+    fill: #ffffff;
 }

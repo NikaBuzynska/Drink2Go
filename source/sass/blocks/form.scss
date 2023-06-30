@@ -1,10 +1,18 @@
 .form {
+    margin-bottom: 40px;
+    
     @media (min-width: $tablet-width) {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-bottom: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: block;
+        flex-shrink: 0;
+        width: 318px;
+        padding: 0;
     }
 }
 
@@ -12,27 +20,59 @@
     border: none;
     width: 100%;
     box-sizing: border-box;
-    padding: 20px 17px 30px 23px;
+    padding: 0;
+    margin-bottom: 30px;
 
     @media (min-width: $tablet-width) {
         width: 223px;
         padding: 0;
     }
+
+    @media (min-width: $desktop-width) {
+        width: 100%;
+    }
+}
+
+.form__filter-group--radio{
+    margin-bottom: 14px;
+}
+
+.form__filter-group--checkbox{
+    margin-bottom: 10px;
 }
 
 .form__filter-title {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
+    margin-bottom: 29px;
 }
 
-.form__price-container {
-    padding-top: 20px;
+.form__filter-group--radio .form__filter-title {
+    margin-bottom: 20px;
+}
 
-    @media (min-width: $tablet-width) {
-        display: flex;
-        justify-content: space-between;
-    }
+.form__filter-group--checkbox .form__filter-title {
+    margin-bottom: 4px;
+}
+
+
+.form__price-container {
+    position: relative;
+    display: flex;
+    padding-top: 0;
+    justify-content: space-between;
+}
+
+.form__price-container::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: #bdbdbd;
+    left: 50%;
+    margin-left: -4px;
+    top: 50%;
 }
 
 .form__price-input {
@@ -42,8 +82,9 @@
     font-weight: 500;
     line-height: 24px;
     text-align: center;
-    width: 98px;
-    padding: 8px 10px;
+    width: 117px;
+    padding: 6px 10px;
+    box-sizing: border-box;
     border-radius: 4px;
     border: 2px solid #9070EC;
 
@@ -51,16 +92,21 @@
         width: 88px;
         box-sizing: border-box;
     }
+
+    @media (min-width: $desktop-width) {
+        width: 134px;
+    }
 }
 
 .radio-type__list {
     list-style: none;
     padding-left: 34px;
+    margin: 0;
 }
 
 .checkbox-type__list {
     list-style: none;
-    padding-left: 57px;
+    padding-left: 51px;
 }
 
 .radio-type__item {
@@ -80,7 +126,7 @@
 .control__window {
     position: absolute;
     top: 0px;
-    left: -26px;
+    left: -33px;
     width: 20px;
     height: 20px;
     border: none;
@@ -89,55 +135,98 @@
     background-color: #ffffff;
 }
 
-.control__input[type="radio"]:checked + .control__window::after {
+
+.control:hover .control__input[type="radio"] + .control__window::after,
+.control:focus .control__input[type="radio"] + .control__window::after,
+.control__input[type="radio"]:checked + .control__window::after,
+.control__input[type="radio"]:focus + .control__window::after  {
     position: absolute;
     width: 16px;
     height: 16px;
     top: 2px;
     left: 2px;
     border-radius: 10px;
-    background-color: #9070EC;
+    background-color: #7859CF40;
     background-size: 16px 16px;
     content: "";
 }
 
-.control__input:disabled + .control__window + .conrol__title {
-    color: gray;
+.control .control__input[type="radio"]:checked + .control__window::after {
+    background-color: #9070EC;
 }
 
-.control__input:focus + .control__window {
+.control__input[type="radio"]:focus + .control__window {
     border: 2px solid #9070EC;
+}
+
+.control__input[type="radio"]:focus + .control__window::after  {
+    background-color: #7859CF40;
+}
+
+.control__input[type="radio"]:disabled + .control__window + .conrol__title {
+    color: #e3e3e3;
+}
+
+.control:hover .control__input[type="radio"]:disabled + .control__window::after{
+    display: none;
+}
+
+.control__input[type="radio"]:disabled + .control__window {
+    border-color: #e3e3e3
 }
 
 .control__switch {
     position: absolute;
     top: 0px;
     left: -50px;
-    width: 42px;
-    height: 24px;
+    width: 38px;
+    height: 20px;
     border-radius: 16px;
+    border: 2px solid #bdbdbd;
     background-color: #bdbdbd;
 }
+
+.control:focus .control__switch, 
+.control:hover .control__switch {
+    background-color: #8f70ed36;
+    border-color: #9070ec;
+}
+
 
 .control__input[type="checkbox"] + .control__switch::after {
     position: absolute;
     width: 20px;
     height: 20px;
-    top: 2px;
-    left: 2px;
+    top: 0;
+    left: 0;
     border-radius: 10px;
     background-color: #ffffff;
     background-size: 16px 16px;
     content: "";
 }
 
+.control__input[type="checkbox"]:focus + .control__switch {
+    background-color: #8f70ed36;
+    border-color: #9070ec;
+}
+
 .control__input[type="checkbox"]:checked + .control__switch{
     background-color: #7859cf;
+    border-color: #7859cf;
+}
+
+.control__input[type="checkbox"]:disabled + .control__switch{
+    background-color: #e3e3e3;
+    border-color: #e3e3e3;
+}
+
+.control__input[type="checkbox"]:disabled + .control__switch + .conrol__title {
+    color: #e3e3e3;
 }
 
 .control__input[type="checkbox"]:checked + .control__switch::after {
     left: auto;
-    right: 2px;
+    right: 0;
 }
 
 .checkbox-type__list {
@@ -150,7 +239,13 @@
     @media (min-width: $tablet-width) {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 40px;
+        margin-top: 9px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        display: flex;
+        max-height: 40px;
     }
 }
 
@@ -174,6 +269,21 @@
         margin-right: 20px;
         width: 137px;
     }
+
+    @media (min-width: $desktop-width) {
+        width: 149px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #9070EC;
+    }
+    &:active {
+        background-color: #593CAC;
+    }
+    &:disabled {
+        background-color: #BDBDBD;
+    }
 }
 
 .reset-button {
@@ -183,19 +293,35 @@
     @media (min-width: $tablet-width) {
         width: 120px;
     }
-}
 
-.range {
-    @media (min-width: $tablet-width) {
-        padding-top: 28px;
+    @media (min-width: $desktop-width) {
+        width: 149px;
+    }
+
+    &:hover,
+    &:focus {
+        color: #ffffff;
+        background-color: #9070EC;
+    }
+    &:active {
+        color: #ffffff;
+        background-color: #593CAC;
+    }
+    &:disabled {
+        color: #ffffff;
+        background-color: #BDBDBD;
     }
 }
 
 .range__scale {
     position: relative;
     height: 2px;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     background-color: rgb(226, 226, 226);
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 33px;
+    }
 }
 
 .range__bar {

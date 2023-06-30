@@ -20,10 +20,8 @@
     line-height: 16px;
     text-align: center;
     text-transform: uppercase;
-
-    @media (min-width: $tablet-width) {
-        margin-bottom: 4px;
-    }
+    margin: 0;
+    margin-bottom: 4px;
 
     @media (min-width: $desktop-width) {
         text-align: start;
@@ -40,6 +38,7 @@
     @media (min-width: $tablet-width) {
         font-size: 56px;
         line-height: 80px;
+        margin-bottom: 17px;
     }
 
     @media (min-width: $desktop-width) {
@@ -53,7 +52,7 @@
     line-height: 20px;
     font-weight: 400;
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 10px 0 21px 0;
     padding-left: 5px;
     padding-right: 5px;
     min-height: 100px;
@@ -63,12 +62,13 @@
         font-size: 20px;
         line-height: 32px;
         margin: 0;
-        padding: 0;
+        padding: 0 9px;
     }
 
     @media (min-width: $desktop-width) {
         text-align: start;
-        margin-bottom: 40px;
+        padding-left:0;
+        margin-bottom: 35px;
     }
 }
 
@@ -81,8 +81,9 @@
         position: absolute;
         width: 476px;
         height: 476px;
-        bottom: -200px;
-        left: 146px;
+        bottom: -218px;
+        left: 50%;
+        margin-left: -238px;
     }
 
     @media (min-width: $desktop-width) {
@@ -141,9 +142,7 @@
 }
 
 .promo__swiper-button-prev {
-    &::after{
-        display:none;
-    }
+    
     width: 20px;
     height: 100%;
     position: absolute;
@@ -151,22 +150,42 @@
     left: 0;
     padding: 0;
     background-color: transparent;
-    background-image: url("/img/icons/stack.svg#adv-left");
-    background-repeat: no-repeat;
-    background-size: 11px 20px;
-    background-position: center;
     border: none;
 
     @media (min-width: $tablet-width) {
         width: 80px;
+        &:hover{
+            background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
+        &:active {
+            background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+        }
+    }
+
+    &::after{
+        display:none;
+    }
+}
+
+.promo__swiper-button-prev::before {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 20px;
+    background-image: url("/img/icons/stack.svg#adv-left");
+    background-position: center;
+    margin-top: 0;
+    
+    @media (min-width: $tablet-width) {
+        margin-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 0;
     }
 }
 
 .promo__swiper-button-next {
-    &::after{
-        display:none;
-    } 
-
     width: 20px;
     height: 100%;
     position: absolute;
@@ -174,14 +193,38 @@
     right: 0;
     padding: 0;
     background-color: transparent;
-    background-image: url("/img/icons/stack.svg#adv-right");
-    background-repeat: no-repeat;
-    background-size: 11px 20px;
-    background-position: center;
     border: none;
 
     @media (min-width: $tablet-width) {
         width: 80px;
+        &:hover{
+            background: linear-gradient(270deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
+        &:active {
+            background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+        }
+    }
+
+    &::after{
+        display:none;
+    } 
+}
+
+.promo__swiper-button-next::before {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 20px;
+    background-image: url("/img/icons/stack.svg#adv-right");
+    background-position: center;
+    margin-top: 0;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 0;
     }
 }
 
@@ -189,7 +232,7 @@
     margin: 0 25px;
 
     @media (min-width: $tablet-width) {
-        margin-top: 24px;
+        margin-top: 15px;
         text-align: center;
     }
 
@@ -224,4 +267,15 @@
     background-color: #7859CF;
     border-radius: 4px;
     border: none;
+
+    &:hover,
+    &:focus {
+        background-color: #9070EC;
+    }
+    &:active {
+        background-color: #593CAC;
+    }
+    &:disabled {
+        background-color: #BDBDBD;
+    }
 }
