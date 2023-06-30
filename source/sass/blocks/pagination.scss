@@ -1,6 +1,10 @@
 .pagination {
     background-color: #F8F8F8;
     padding: 40px 20px 44px 20px;
+
+    @media (min-width: $tablet-width) {
+        padding: 69px 20px 91px;
+    }
 }
 
 .pagination__list {
@@ -8,6 +12,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
+
+    @media (min-width: $tablet-width) {
+        justify-content: flex-end;
+    }
 }
 
 .pagination__item {

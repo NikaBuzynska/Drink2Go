@@ -15,16 +15,21 @@
         margin-right: 40px;
     }
 }
+.navigation__logo{
+    @media (min-width: $tablet-width) {
+        margin-right: 55px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-right: 0;
+    }
+}
 
 .navigation__logo-link {
     display: inline-block;
     padding: 12px 20px;
 
     @media (min-width: $tablet-width) {
-        padding: 22px 20px;
-    }
-
-    @media (min-width: $desktop-width) {
         padding: 22px 0;
     }
 }
@@ -79,7 +84,7 @@
 }
 
 .navigation__description {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width-only) {
         @include visually-hidden;
     }
 
@@ -92,6 +97,7 @@
         margin-top: 24px;
         margin-bottom: 24px;
         margin-left: 20px;
+        margin-right: 91px;
     } 
 }
 

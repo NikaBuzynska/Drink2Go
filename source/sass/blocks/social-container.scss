@@ -6,8 +6,9 @@
     box-shadow: 0px 1px 1px #f0ebff;
 
     @media (min-width: $tablet-width) {
-        padding-bottom: 12px;
         box-shadow: none;
+        padding-top: 37px;
+        padding-bottom: 1px;
     }
     
     @media (min-width: $desktop-width) {
@@ -33,7 +34,7 @@
 }
 
 .social-container__motto {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width-only) {
         @include visually-hidden;
     }
 

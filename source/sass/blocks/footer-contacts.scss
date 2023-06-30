@@ -2,6 +2,11 @@
     padding: 17px 20px 21px;
     box-shadow: 0 1px 1px #f0ebff;
 
+    @media (min-width: $tablet-width) {
+        width: 223px;
+        box-sizing: border-box;
+    }
+
     @media (min-width: $desktop-width) {
         padding-right: 0;
     }

@@ -16,6 +16,9 @@
     @media (min-width: $tablet-width) { 
         width: 223px;
         box-shadow: none;
+        box-sizing: border-box;
+        margin-right: 29px;
+        padding-bottom: 6px;
     }
 
     @media (min-width: $desktop-width) {

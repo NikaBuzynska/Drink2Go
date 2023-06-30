@@ -2,7 +2,7 @@
     padding-top: 50px;
     text-align: center;
     @media (min-width: $tablet-width) {
-        padding: 60px 30px 50px;
+        padding: 81px 30px 50px;
     }
 
     @media (min-width: $desktop-width) {
@@ -73,6 +73,12 @@
         margin-bottom: 50px;
         box-sizing: border-box;
         background-position: 0 0;
+
+        &:nth-child(2n){
+            padding-right: 0;
+            padding-left: 87px;
+            background-position-x: 16px;
+        }
     }
 
     @media (min-width: $desktop-width) {
@@ -89,6 +95,8 @@
         }
     }
 }
+
+
 
 .advantages__list-item--speed { 
     background-image: url("/img/icons/stack.svg#speed"); 

@@ -5,8 +5,7 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-bottom: 45px;
     }
 
     @media (min-width: $desktop-width) {
@@ -239,7 +238,7 @@
     @media (min-width: $tablet-width) {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 40px;
+        margin-top: 9px;
     }
 
     @media (min-width: $desktop-width) {
@@ -313,17 +312,15 @@
     }
 }
 
-.range {
-    @media (min-width: $tablet-width) {
-        padding-top: 28px;
-    }
-}
-
 .range__scale {
     position: relative;
     height: 2px;
     margin-bottom: 36px;
     background-color: rgb(226, 226, 226);
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 33px;
+    }
 }
 
 .range__bar {
