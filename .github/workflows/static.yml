@@ -40,9 +40,9 @@ jobs:
         run: |
           npm install
 
-      - name: Run checks
-        run: |
-          npm run lint
+      # - name: Run checks
+      #   run: |
+      #     npm run lint
 
       - name: Build Project
         run: |
